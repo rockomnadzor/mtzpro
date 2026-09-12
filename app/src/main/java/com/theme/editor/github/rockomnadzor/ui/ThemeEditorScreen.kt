@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.sp
 import com.theme.editor.github.rockomnadzor.MtzUtils
 
 @Composable
-fun ThemeEditorScreen(uri: Uri, fileName: String) {
+fun ThemeEditorScreen(uri: Uri, fileName: String, onChangeWallpaper: () -> Unit) {
     val context = LocalContext.current
     var themeName by remember { mutableStateOf("…") }
     var showRenameDialog by remember { mutableStateOf(false) }
@@ -35,7 +35,7 @@ fun ThemeEditorScreen(uri: Uri, fileName: String) {
         }
 
         Spacer(Modifier.height(24.dp))
-        Button(onClick = { /* следующий шаг: экран смены обоев */ }) {
+        Button(onClick = onChangeWallpaper) {
             Text("Поменять обои")
         }
     }

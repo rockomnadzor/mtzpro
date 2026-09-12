@@ -4,4 +4,5 @@ sealed class Screen {
     object ShizukuCheck : Screen()
     object PickFile : Screen()
     object ThemeEditor : Screen()
+    object Wallpaper : Screen()
 }
